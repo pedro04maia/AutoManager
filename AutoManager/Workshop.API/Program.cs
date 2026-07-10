@@ -1,4 +1,6 @@
 
+using Workshop.API.Middlewares;
+
 namespace Workshop.API
 {
     public class Program
@@ -22,6 +24,8 @@ namespace Workshop.API
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+
+            app.UseMiddleware<GlobalExceptionMiddleware>();
 
             app.UseHttpsRedirection();
 
