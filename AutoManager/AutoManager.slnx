@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/Identity/" />
+  <Folder Name="/PartsCatalog/" />
+  <Folder Name="/Workshop/">
+    <Project Path="Workshop.API/Workshop.API.csproj" />
+  </Folder>
+</Solution>
