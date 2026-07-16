@@ -31,13 +31,12 @@
             context.Response.ContentType = "application/json";
             context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
 
-            // Cria o padrão ProblemDetails exigido no guião
             var problemDetails = new ProblemDetails
             {
                 Status = context.Response.StatusCode,
                 Type = "https://httpstatuses.com/500",
                 Title = "Ocorreu um erro interno no servidor.",
-                Detail = exception.Message // Em produção omitia-se, mas para o projeto ajuda a depurar
+                Detail = exception.Message
             };
 
             var json = JsonSerializer.Serialize(problemDetails);
